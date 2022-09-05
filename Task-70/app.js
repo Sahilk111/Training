@@ -1,0 +1,18 @@
+//Inherit from syntax error //
+
+class FormatError extends SyntaxError{
+
+    constructor(message){
+
+        super(message);
+        this.name = this.constructor.name;
+    }
+}
+
+let err = new FormatError("formatting error");
+
+alert( err.message ); 
+alert( err.name ); 
+alert( err.stack ); 
+
+alert(err instanceof SyntaxError);
